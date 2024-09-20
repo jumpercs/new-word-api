@@ -24,6 +24,13 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
 
+
+  frontend:
+    image: bible-frontend
+    build: ./projectBible
+    ports:
+      - 4200:4200
+
   prometheus:
     image: prom/prometheus:latest
     volumes:
